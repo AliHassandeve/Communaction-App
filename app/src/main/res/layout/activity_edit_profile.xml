@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:id="@+id/ProToolbarID"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ProfileusernameID"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:layout_below="@id/ProToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:background="#F6F6F6"
+            android:layout_margin="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:id="@+id/SubmitButtonID"
+                android:layout_width="wrap_content"
+                android:src="@drawable/doneicon"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/UserProfileImageID"
+                android:layout_width="100dp"
+                android:elevation="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/defaultimeg"
+                android:layout_height="100dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/UserProfileNameID"
+                android:layout_below="@+id/UserProfileImageID"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textSize="17sp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:hint="UserName"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

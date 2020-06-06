@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1057953138122",
+    "firebase_url": "https://intrahubapp.firebaseio.com",
+    "project_id": "intrahubapp",
+    "storage_bucket": "intrahubapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057953138122:android:394deb3b2d1d99839ffb33",
+        "android_client_info": {
+          "package_name": "com.Intrahubproject.intrahub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057953138122-jajvjnalu9s502nhkd8t758dt2hjrqdb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Intrahubproject.intrahub",
+            "certificate_hash": "bd9f00a877f6f008739a94e08debbaa2bad7ee92"
+          }
+        },
+        {
+          "client_id": "1057953138122-7iri74m1lgreilk8r4shllmdb78hcjbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvO9fHU90R9RLevtJsjA1i-lO1gMJ6zr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057953138122-7iri74m1lgreilk8r4shllmdb78hcjbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

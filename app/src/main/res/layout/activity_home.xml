@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RelativeLayoutID"
+    android:background="@android:color/white"
+    tools:context=".HomeActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppbarLayouID"
+        android:elevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/HomeToolbarID"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="32dp"
+                    android:elevation="1dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/defaultimeg"
+                    android:id="@+id/ProfileImageID"
+                    android:layout_height="32dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_marginLeft="5dp"
+                    android:elevation="1dp"
+                    android:layout_toRightOf="@+id/ProfileImageID"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/TabLayoutID"
+            android:background="@drawable/tab_layout_background"
+            android:layout_below="@+id/HomeToolbarID"
+            app:tabTextColor="@android:color/white"
+            android:layout_width="wrap_content"
+            app:tabMode="scrollable"
+            android:layout_marginLeft="15sp"
+            android:elevation="1dp"
+            app:tabPaddingStart="16dp"
+            app:tabBackground="@drawable/tab_layout_selector"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabPaddingEnd="16dp"
+            app:tabRippleColor="@null"
+            android:layout_marginBottom="10dp"
+            android:layout_height="36dp">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ViewPagerID"
+        android:layout_below="@+id/AppbarLayouID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ChatActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/ChatToolbarID"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ProgressBar
+                android:id="@+id/RecoderProgressbarID"
+                android:layout_alignParentRight="true"
+                android:layout_width="35dp"
+                android:layout_marginRight="5dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_height="35dp">
+
+            </ProgressBar>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ChatProfileImageID"
+                android:layout_width="35dp"
+                android:elevation="1dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/defaultimeg"
+                android:layout_height="35dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/ChatProfileImageID"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ChatUsernameID"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/white"
+                    android:text="Mr Sajib Roy"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/UserstatasID"
+                    android:layout_below="@+id/ChatUsernameID"
+                    android:textSize="14sp"
+                    android:text="online"
+                    android:textColor="#EAEAEA"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/MiddleLayoutID"
+        android:layout_below="@+id/ChatToolbarID"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/ButtonLayoutIDd"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:src="@drawable/background"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent">
+
+        </ImageView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/SbuttonID"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@+id/ButtonLayoutID"
+            android:id="@+id/MessageRecylerViewID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/ButtonLayoutID"
+            android:elevation="1dp"
+            android:background="#FAFAFA"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/PlusIconID"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plusicon"
+                    android:layout_width="28sp"
+                    android:layout_height="28dp">
+                </ImageView>
+
+
+                <!--this is the audio button-->
+
+                <RelativeLayout
+                    android:id="@+id/AudioLayoutID"
+                    android:layout_toRightOf="@+id/PlusIconID"
+                    android:layout_width="40dp"
+                    android:elevation="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="1.5dp"
+                    android:layout_marginTop="1.5dp"
+                    android:background="@drawable/unclick_voicebackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/AAudioIconID"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/voiceicon"
+                        android:layout_width="28sp"
+                        android:layout_height="28dp">
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/InputMessageID"
+                    android:layout_toRightOf="@+id/AudioLayoutID"
+                    android:backgroundTint="@null"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:hint="Enter message"
+                    android:textSize="17sp"
+                    android:layout_toLeftOf="@+id/SendiconID"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+
+                <ImageView
+                    android:id="@+id/SendiconID"
+                    android:src="@drawable/sendicon"
+                    android:layout_centerVertical="true"
+                    android:layout_width="28sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="28dp">
+                </ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/ButtonLayoutIDd"
+        android:layout_alignParentBottom="true"
+        android:elevation="1dp"
+        android:background="#FAFAFA"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:background="@drawable/cardclickripple"
+                            android:id="@+id/CameraButtonID"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/adocumenticon"
+                                    android:layout_width="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/camerlogo"
+                                    android:layout_height="40dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_below="@+id/adocumenticon"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="15sp"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:text="Camera"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/PhotosButtonID"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:background="@drawable/cardclickripple"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RelativeLayout
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/ssdocumenticon"
+                                    android:layout_width="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/picon"
+                                    android:layout_height="40dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_below="@+id/ssdocumenticon"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="15sp"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:text="Photo"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ViewButtonID"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:background="@drawable/cardclickripple"
+                            android:id="@+id/VideoButtonID"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/documenticon"
+                                    android:layout_width="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/videoicon"
+                                    android:layout_height="40dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_below="@+id/documenticon"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="15sp"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="sans-serif-condensed-light"
+                                    android:text="Video"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/AudioButtonID"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@drawable/cardclickripple"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/adocumenticon"
+                        android:layout_width="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/speaker"
+                        android:layout_height="40dp">
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_below="@+id/adocumenticon"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:text="Audio"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PdfButtonID"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:background="@drawable/cardclickripple"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ssdocumenticon"
+                        android:layout_width="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/pdf"
+                        android:layout_height="40dp">
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_below="@+id/ssdocumenticon"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:text="pdf"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DocumtnButtonID"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@drawable/cardclickripple"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/documenticon"
+                        android:layout_width="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/documenticon"
+                        android:layout_height="40dp">
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_below="@+id/documenticon"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:text="Docx"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

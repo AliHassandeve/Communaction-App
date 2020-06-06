@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wifi"
+            android:src="@drawable/nowifi"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="100dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/opps"
+            android:layout_below="@id/wifi"
+            android:layout_marginTop="30dp"
+            android:text="Opps"
+            android:textSize="50dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/sss"
+            android:layout_below="@id/opps"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:text="No Internet connection found"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/sssd"
+            android:layout_below="@id/sss"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:text="Please turn on your internet connection"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/WifiOnbuttonID"
+            android:layout_below="@+id/sssd"
+            android:layout_marginTop="40sp"
+            android:layout_marginLeft="20dp"
+            android:elevation="1dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/wifibutton_design"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:background="@drawable/wifiripple"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:text="Turn on Wifi/Mobile data"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

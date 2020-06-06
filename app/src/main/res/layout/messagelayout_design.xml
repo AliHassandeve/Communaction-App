@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ProfileImageViewID"
+            android:layout_width="45dp"
+            android:layout_marginTop="3dp"
+            android:elevation="1.1dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/defaultimeg"
+            android:layout_height="45dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:elevation="1dp"
+            android:background="@drawable/messagebackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/NotifactionNameID"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Mr Sajib Roy"
+                android:textColor="#3F51B5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/NotifactionMessageID"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/NotifactionNameID"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"
+                android:textColor="#505050"
+                android:text="hello brother how are you what are you downing now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_marginTop="5dp"
+               android:layout_marginRight="5dp"
+               android:layout_alignParentRight="true"
+               android:layout_height="wrap_content">
+
+
+               <ImageView
+                   android:id="@+id/AleartImageID"
+                   android:elevation="1dp"
+                   android:src="@drawable/notifactionicon"
+                   android:layout_alignParentRight="true"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp">
+               </ImageView>
+
+               <TextView
+                   android:id="@+id/TimeID"
+                   android:textColor="#838383"
+                   android:textSize="12sp"
+                   android:text="9:00 PM"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="5dp"
+                   android:layout_toLeftOf="@id/AleartImageID"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+
+               <TextView
+                   android:id="@+id/DateID"
+                   android:textColor="#838383"
+                   android:textSize="12sp"
+                   android:text="9:00 PM"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="5dp"
+                   android:layout_toLeftOf="@id/TimeID"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+
+
+
+           </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

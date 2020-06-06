@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:background="@drawable/notifaction_update_design"
+        android:layout_width="match_parent"
+        android:elevation="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+       android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/Headerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:text="Admin Message"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/NotifactionTimerID"
+                android:textSize="13sp"
+                android:layout_centerHorizontal="true"
+                android:text="20:00 PM"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/NotifactionDateID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/NotifactionDateID"
+                android:textSize="13sp"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="20:00 PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/Headerlayout"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/MessagePostTextID"
+                android:textSize="16sp"
+                android:textColor="#605F5F"
+                android:fontFamily="sans-serif-condensed"
+                android:text="You’re not connected
+And the web just isn’t the same without you.
+Let’s get you back online
+Check that your network cables are plugged in.
+Make sure you’re not in flight mode.
+See if your wireless switch is turned on.
+Restart your router."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

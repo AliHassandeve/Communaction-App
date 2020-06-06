@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:src="@drawable/world_map"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ImageView>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/applogo"
+        android:layout_centerHorizontal="true"
+        android:elevation="1dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent">
+
+    </ImageView>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content">
+
+
+       <!-- -->
+        <TextView
+            android:id="@+id/homepeogressID"
+            android:layout_centerHorizontal="true"
+            android:text="Waiting connecting the server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="Welcome To IntraHub"
+            android:layout_below="@+id/homepeogressID"
+            android:id="@+id/WelcometextID"
+            android:textColor="#9C27B0"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

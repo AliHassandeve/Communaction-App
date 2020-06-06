@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/HeaderLayoutID"
+    android:background="@drawable/userselcted_ripple"
+    android:layout_height="80dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/MprofileTextID"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:text="Goto my profile"
+        app:fontFamily="sans-serif-condensed"
+        android:elevation="1dp"
+        android:background="@drawable/profile_design"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/SprofileImageID"
+        android:layout_width="65dp"
+        android:elevation="1dp"
+        android:layout_marginLeft="15sp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/defaultimeg"
+        android:layout_height="65dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/SprofileImageID"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/SusernameID"
+                android:textColor="@android:color/black"
+                android:text="Mr Sajib Roy"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <ImageView
+                android:id="@+id/isonlineID"
+                android:layout_toRightOf="@+id/SusernameID"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/onlinedot"
+                android:layout_width="8dp"
+                android:layout_height="8dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/SmessageID"
+            android:layout_below="@id/layout"
+            android:text="welcome to intrabub"
+            android:textSize="14dp"
+            android:layout_marginRight="100dp"
+            android:singleLine="true"
+            android:textColor="#919191"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/STimeID"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.google.android.material.textview.MaterialTextView>
+
+
+
+</RelativeLayout>

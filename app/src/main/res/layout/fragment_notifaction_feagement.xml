@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".NotifactionFeagement">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/AleartLayoutID"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/NotifactionIconID"
+                android:src="@drawable/notifactionicon"
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/NotifactionTextID"
+                android:layout_below="@+id/NotifactionIconID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="22sp"
+                android:text="No Message Notifaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/NotifactionViewID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

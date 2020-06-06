@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".VideoPlayerActivity">
+
+    <ProgressBar
+        android:id="@+id/BufferProgressbarID"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:elevation="1dp"
+        android:indeterminateTint="@android:color/white"
+        android:progressTint="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/VidePlayerToolbarID"
+        android:layout_width="match_parent"
+        android:elevation="1dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="17sp"
+                android:textColor="@android:color/white"
+                android:text="Intrahub Player"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/VideoDateandtime"
+                android:textSize="10sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <VideoView
+        android:id="@+id/ViewViewID"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </VideoView>
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15sp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/ViewPlayButtonID"
+            android:src="@drawable/playbutonwhiteicon"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp">
+
+        </ImageView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ProgressVideoTimerID"
+            android:layout_toRightOf="@+id/ViewPlayButtonID"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:text="0:00"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <ProgressBar
+            android:id="@+id/VideoProgressiD"
+            android:layout_toLeftOf="@+id/VideoDuractionTimerID"
+            android:layout_toRightOf="@+id/ProgressVideoTimerID"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@android:color/white"
+            android:layout_width="match_parent"
+            android:progressTint="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@android:color/white"
+            android:layout_height="wrap_content">
+        </ProgressBar>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/VideoDuractionTimerID"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:text="0:00"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

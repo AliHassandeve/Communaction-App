@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".RegisterActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/ss"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcometext"
+            android:layout_width="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:text="Create Account"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/des"
+            android:layout_below="@+id/welcometext"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Sign Up to continue!"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_above="@+id/buttomid"
+        android:layout_below="@id/ss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/RLEmailID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:hint="Enter your email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textSize="17sp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/RLEmailID"
+                android:id="@+id/RLPasswordID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:passwordToggleEnabled="true"
+                android:hint="Enter your password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textSize="17sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/passwordicon"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+             <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/RLPasswordID"
+                android:id="@+id/LRPasswordID"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:passwordToggleEnabled="true"
+                android:hint="Retype your password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textSize="17sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/passwordicon"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/LForgotPasswordID"
+                android:layout_below="@+id/LRPasswordID"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="15sp"
+                android:text="Forgot Password?"
+                android:textColor="@android:color/black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <RelativeLayout
+                android:elevation="1dp"
+                android:id="@+id/RLoginButtonID"
+                android:background="@drawable/loginbuttondesign"
+                android:layout_below="@+id/LForgotPasswordID"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Create Account"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/facebookdesign"
+                android:layout_below="@+id/RLoginButtonID"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/facebokkigi"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15sp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Connect with facebook"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/buttomid"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/newacc"
+                android:text="I Have an Account?"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_width="wrap_content"
+                android:textSize="17dp"
+                android:textColor="#009688"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/RLogintextID"
+                android:layout_toRightOf="@id/newacc"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20dp"
+                android:textColor="#FF5722"
+                android:text="SingIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20sp">
+
+
+    <RelativeLayout
+
+        android:id="@+id/LayoitOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/FirstImage"
+            android:layout_centerVertical="true"
+            android:layout_width="70dp"
+            android:src="@drawable/love"
+            android:layout_height="70dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="GOOD BYE NOW"
+            android:textSize="17sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:src="@drawable/love"
+            android:layout_height="70dp">
+
+        </ImageView>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/LayoitOne"
+        android:layout_marginTop="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/CloseButtonID"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:text="CLOSE"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:backgroundTint="#FF9800"
+            android:id="@+id/StayButtonID"
+            android:layout_width="wrap_content"
+            android:text="STAY"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/bottomsheed_design">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:text="Request Message"
+        android:id="@+id/text"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+    <EditText
+        android:layout_below="@id/text"
+        android:background="@drawable/admindesign"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:id="@+id/UserEmailID"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+
+    <EditText
+        android:layout_below="@id/UserEmailID"
+        android:background="@drawable/admindesign"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your message"
+        android:id="@+id/UserMessagelID"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:gravity="top|left"
+        android:padding="10dp"
+        android:layout_height="100dp">
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/Note"
+        android:layout_below="@id/UserMessagelID"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:text="We are very grateful for having you with us.
+Kindly input your email and message on the box we are sending credentials on your email address soon\n\nThanks for using our app"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <RelativeLayout
+        android:id="@+id/SubmitbuttonIDa"
+        android:layout_below="@+id/Note"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:elevation="1dp"
+        android:background="@drawable/adminbutton"
+        android:layout_marginBottom="10dp"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:background="@drawable/submitbutton_ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Submit your request"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
