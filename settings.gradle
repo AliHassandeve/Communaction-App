@@ -1,0 +1,2 @@
+rootProject.name='Intrahub'
+include ':app'
