@@ -141,6 +141,7 @@
                 <!--this is the audio button-->
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:id="@+id/AudioLayoutID"
                     android:layout_toRightOf="@+id/PlusIconID"
                     android:layout_width="40dp"

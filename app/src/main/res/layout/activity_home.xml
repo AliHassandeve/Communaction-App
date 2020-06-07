@@ -60,21 +60,11 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/TabLayoutID"
-            android:background="@drawable/tab_layout_background"
-            android:layout_below="@+id/HomeToolbarID"
+            app:tabIndicator="@android:color/white"
+            android:background="@color/colorPrimary"
             app:tabTextColor="@android:color/white"
-            android:layout_width="wrap_content"
-            app:tabMode="scrollable"
-            android:layout_marginLeft="15sp"
-            android:elevation="1dp"
-            app:tabPaddingStart="16dp"
-            app:tabBackground="@drawable/tab_layout_selector"
-            app:tabIndicatorHeight="0dp"
-            app:tabSelectedTextColor="@color/colorPrimary"
-            app:tabPaddingEnd="16dp"
-            app:tabRippleColor="@null"
-            android:layout_marginBottom="10dp"
-            android:layout_height="36dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         </com.google.android.material.tabs.TabLayout>
 

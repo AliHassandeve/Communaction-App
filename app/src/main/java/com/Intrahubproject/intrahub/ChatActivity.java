@@ -547,6 +547,7 @@ public class ChatActivity extends AppCompatActivity {
         });*/
 
 
+
         // audioclick
         AudioButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -555,11 +556,14 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
+
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
 
                     recoderprogressbar.setVisibility(View.VISIBLE);
                     AudioButton.setBackgroundResource(R.drawable.click_background_audio);
+                    AudioButton.setVisibility(View.GONE);
                     voiceicon.setImageResource(R.drawable.voicewhiteicon);
+                    voiceicon.setVisibility(View.GONE);
 
 
                     if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.M){
@@ -588,7 +592,10 @@ public class ChatActivity extends AppCompatActivity {
                     stopAudio();
                     recoderprogressbar.setVisibility(View.INVISIBLE);
                     AudioButton.setBackgroundResource(R.drawable.unclick_voicebackground);
+                    AudioButton.setVisibility(View.GONE);
                     voiceicon.setImageResource(R.drawable.voiceicon);
+                    voiceicon.setVisibility(View.GONE);
+                    voiceicon.setVisibility(View.GONE);
                 }
                 else {
                     RequestPermissions();
@@ -616,6 +623,7 @@ public class ChatActivity extends AppCompatActivity {
 
         /// audio click
 
+        AudioButton.setVisibility(View.GONE);
      inputmessage.addTextChangedListener(new TextWatcher() {
          @Override
          public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -633,20 +641,22 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
-
+    /// hear input message
 
          @Override
          public void afterTextChanged(final Editable s) {
 
              String message = s.toString();
              if(message.isEmpty()){
+                 AudioButton.setVisibility(View.GONE);
                  buttondrawer.setVisibility(View.GONE);
                  openposition = "open";
                  opendrawerbutton.setImageResource(R.drawable.plusicon);
                  MuserDatabase.child(SenderID).child("typestatas").setValue("notyping...");
-                 AudioButton.setVisibility(View.VISIBLE);
+
              }
              else {
+                 AudioButton.setVisibility(View.GONE);
                  buttondrawer.setVisibility(View.GONE);
                  openposition = "open";
                  opendrawerbutton.setImageResource(R.drawable.plusicon);
